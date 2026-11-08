@@ -28,7 +28,7 @@ n = int(0.9*len(data))
 train_data, val_data = data[:n], data[n:]
 
 def get_batch(split):
-    d = train_data if split=='traindata' else val_data
+    d = {'train': train_data, 'val': val_data}[split]
     ix = torch.randint(len(d)-block_size, (batch_size,))
     x = torch.stack([d[i:i+block_size] for i in ix])
     y = torch.stack([d[i+1:i+block_size+1] for i in ix])
