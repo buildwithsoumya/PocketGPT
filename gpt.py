@@ -126,11 +126,11 @@ class GPTLanguageModel(nn.Module):
         B, T, C = logits.shape
         loss = F.cross_entropy(logits.view(B * T, C), targets.view(B * T))
         return logits, loss
-    def generate(self, idx, max_new_tokens):
+    def generate(self, idx, max_new_tokens, temperature=1.0):
         for _ in range(max_new_tokens):
-            idx_cond = idx[:, -block_size:]       # never feed more than block_size tokens
+            idx_cond = idx[:, -block_size:]     
             logits, _ = self(idx_cond)
-            logits = logits[:, -1, :]
+            logits = logits[:, -1, :]/temperature
             probs = F.softmax(logits, dim=-1)
             idx_next = torch.multinomial(probs, num_samples=1)
             idx = torch.cat((idx, idx_next), dim=1)
@@ -151,3 +151,5 @@ if __name__ == '__main__':
         optimizer.step()
     context = torch.zeros((1,1), dtype=torch.long, device=device)
     print(decode(model.generate(context, max_new_tokens=500)[0].tolist()))
+    torch.save(model.state_dict(), 'pocketgpt.pt')
+    print("saved pocketgpt.pt")
