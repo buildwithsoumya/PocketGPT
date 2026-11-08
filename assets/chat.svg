@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="968" height="602" viewBox="0 0 968 602">
+<rect width="968" height="602" rx="10" fill="#1e1e2e"/>
+<rect width="968" height="34" rx="10" fill="#313244"/>
+<rect y="24" width="968" height="10" fill="#313244"/>
+<circle cx="20" cy="17" r="6" fill="#f38ba8"/>
+<circle cx="40" cy="17" r="6" fill="#f9e2af"/>
+<circle cx="60" cy="17" r="6" fill="#a6e3a1"/>
+<text x="484.0" y="22" fill="#a6adc8" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="13" text-anchor="middle">python chat.py — chatting with PocketGPT</text>
+<g font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="14" xml:space="preserve">
+<text x="18" y="64"><tspan fill="#a6e3a1">(.venv) PS PocketGPT&gt;</tspan> <tspan fill="#cdd6f4" font-weight="bold">python chat.py</tspan></text>
+<text x="18" y="83"><tspan fill="#fab387">PocketGPT ready. Type a prompt (empty line to quit).</tspan></text>
+<text x="18" y="102"><tspan fill="#89dceb">&gt;</tspan> <tspan fill="#f9e2af" font-weight="bold">ROMEO:\n</tspan></text>
+<text x="18" y="121"><tspan fill="#cdd6f4">ROMEO:</tspan></text>
+<text x="18" y="140"><tspan fill="#cdd6f4">It thy father, to shome of you hy time to my would a, to the shall do</tspan></text>
+<text x="18" y="159"><tspan fill="#cdd6f4">like againes his ear.</tspan></text>
+<text x="18" y="178"><tspan fill="#cdd6f4"></tspan></text>
+<text x="18" y="197"><tspan fill="#cdd6f4">BALT:</tspan></text>
+<text x="18" y="216"><tspan fill="#cdd6f4">O God I like you me.</tspan></text>
+<text x="18" y="235"><tspan fill="#cdd6f4"></tspan></text>
+<text x="18" y="254"><tspan fill="#cdd6f4">KING RICHARD IIIII:</tspan></text>
+<text x="18" y="273"><tspan fill="#cdd6f4">Tam heart bing your word as at in own not love the have not lecring the come.</tspan></text>
+<text x="18" y="292"><tspan fill="#cdd6f4">Now,---</tspan></text>
+<text x="18" y="311"><tspan fill="#cdd6f4">When my to the tome</tspan></text>
+<text x="18" y="330"><tspan fill="#cdd6f4">And depereon the that and world how and words,</tspan></text>
+<text x="18" y="349"><tspan fill="#cdd6f4">Some?</tspan></text>
+<text x="18" y="368"><tspan fill="#89dceb">&gt;</tspan> <tspan fill="#f9e2af" font-weight="bold">To be or not</tspan></text>
+<text x="18" y="387"><tspan fill="#cdd6f4">To be or notherself</tspan></text>
+<text x="18" y="406"><tspan fill="#cdd6f4">Untage and gred his man is thereing consal is</tspan></text>
+<text x="18" y="425"><tspan fill="#cdd6f4">poo, the more a love the hearse you are chonself:</tspan></text>
+<text x="18" y="444"><tspan fill="#cdd6f4">A with is too be your the parions all frievioury cauntly son.</tspan></text>
+<text x="18" y="463"><tspan fill="#cdd6f4"></tspan></text>
+<text x="18" y="482"><tspan fill="#cdd6f4">KING EDWARD IV:</tspan></text>
+<text x="18" y="501"><tspan fill="#cdd6f4">Our all slaund of and speaks, and for her all to say and and bard I am to thou have happrience to to shame hhad</tspan></text>
+<text x="18" y="520"><tspan fill="#cdd6f4">Who s</tspan></text>
+<text x="18" y="539"><tspan fill="#89dceb">&gt;</tspan> <tspan fill="#f9e2af" font-weight="bold">Hello @world</tspan></text>
+<text x="18" y="558"><tspan fill="#fab387">Unknown characters: @</tspan></text>
+<text x="18" y="577"><tspan fill="#89dceb">&gt;</tspan> <tspan fill="#f9e2af" font-weight="bold"></tspan></text>
+</g></svg>
