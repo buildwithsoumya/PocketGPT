@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="909" height="659" viewBox="0 0 909 659">
+<rect width="909" height="659" rx="10" fill="#1e1e2e"/>
+<rect width="909" height="34" rx="10" fill="#313244"/>
+<rect y="24" width="909" height="10" fill="#313244"/>
+<circle cx="20" cy="17" r="6" fill="#f38ba8"/>
+<circle cx="40" cy="17" r="6" fill="#f9e2af"/>
+<circle cx="60" cy="17" r="6" fill="#a6e3a1"/>
+<text x="454.5" y="22" fill="#a6adc8" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="13" text-anchor="middle">python gpt.py — training on CPU</text>
+<g font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="14" xml:space="preserve">
+<text x="18" y="64"><tspan fill="#a6e3a1">(.venv) PS PocketGPT&gt;</tspan> <tspan fill="#cdd6f4" font-weight="bold">python gpt.py</tspan></text>
+<text x="18" y="83"><tspan fill="#fab387">209.7K parameters</tspan></text>
+<text x="18" y="102"><tspan fill="#89b4fa">step 0: train 4.4109, val 4.4016</tspan></text>
+<text x="18" y="121"><tspan fill="#89b4fa">step 500: train 2.3010, val 2.3037</tspan></text>
+<text x="18" y="140"><tspan fill="#89b4fa">step 1000: train 2.1026, val 2.1390</tspan></text>
+<text x="18" y="159"><tspan fill="#89b4fa">step 1500: train 1.9954, val 2.0468</tspan></text>
+<text x="18" y="178"><tspan fill="#89b4fa">step 2000: train 1.9176, val 1.9908</tspan></text>
+<text x="18" y="197"><tspan fill="#89b4fa">step 2500: train 1.8665, val 1.9616</tspan></text>
+<text x="18" y="216"><tspan fill="#89b4fa">step 3000: train 1.8173, val 1.9222</tspan></text>
+<text x="18" y="235"><tspan fill="#89b4fa">step 3500: train 1.7884, val 1.8979</tspan></text>
+<text x="18" y="254"><tspan fill="#89b4fa">step 4000: train 1.7582, val 1.8968</tspan></text>
+<text x="18" y="273"><tspan fill="#89b4fa">step 4500: train 1.7366, val 1.8884</tspan></text>
+<text x="18" y="292"><tspan fill="#cdd6f4"></tspan></text>
+<text x="18" y="311"><tspan fill="#cdd6f4">Tear, kind chling me, and new; I as auld and him. And weth lue, toe the plocer go corn Xory my masineHs,</tspan></text>
+<text x="18" y="330"><tspan fill="#cdd6f4">Os Outryisttlesp than from Shame;</tspan></text>
+<text x="18" y="349"><tspan fill="#cdd6f4"></tspan></text>
+<text x="18" y="368"><tspan fill="#cdd6f4">HAMNDrie, not, you swilt to stand at countring. Thome! 't feether;</tspan></text>
+<text x="18" y="387"><tspan fill="#cdd6f4">And, lure Ove be rightly thas</tspan></text>
+<text x="18" y="406"><tspan fill="#cdd6f4">And he the bisht trought: hy rooking Whath?</tspan></text>
+<text x="18" y="425"><tspan fill="#cdd6f4">No, you he livirkes? you shes, the hugh a-peous will,</tspan></text>
+<text x="18" y="444"><tspan fill="#cdd6f4">And a is, bick, the sloukeundganted somewtbrangs</tspan></text>
+<text x="18" y="463"><tspan fill="#cdd6f4">Of himserthings Over: if on king.</tspan></text>
+<text x="18" y="482"><tspan fill="#cdd6f4"></tspan></text>
+<text x="18" y="501"><tspan fill="#cdd6f4">FRUQWIS:</tspan></text>
+<text x="18" y="520"><tspan fill="#cdd6f4">Is the neven of here the good be.</tspan></text>
+<text x="18" y="539"><tspan fill="#cdd6f4"></tspan></text>
+<text x="18" y="558"><tspan fill="#cdd6f4">ANGHERY TPwinds:</tspan></text>
+<text x="18" y="577"><tspan fill="#cdd6f4">Have thy rom.</tspan></text>
+<text x="18" y="596"><tspan fill="#cdd6f4"></tspan></text>
+<text x="18" y="615"><tspan fill="#cdd6f4">ISARG</tspan></text>
+<text x="18" y="634"><tspan fill="#fab387">saved pocketgpt.pt</tspan></text>
+</g></svg>
