@@ -11,7 +11,10 @@ max_iters = 5000
 eval_interval = 500
 eval_iters = 200
 learning_rate = 1e-3
-n_embd = 32
+n_embd = 64
+n_head = 4
+n_layer = 4
+dropout = 0.1
 
 with open('input.txt', 'r', encoding='utf-8') as f:
     text = f.read()
@@ -52,6 +55,7 @@ def estimate_loss(model):
 class Head(nn.Module):
     def __init__(self, head_size):
         super().__init__()
+        self.dropout = nn.Dropout(dropout)
         self.key = nn.Linear(n_embd, head_size, bias=False)
         self.query = nn.Linear(n_embd, head_size, bias=False)
         self.value = nn.Linear(n_embd, head_size, bias=False)
@@ -63,22 +67,59 @@ class Head(nn.Module):
         wei = q@k.transpose(-2, -1)*k.shape[-1]**-0.5
         wei = wei.masked_fill(self.tril[:T, :T] == 0, float('-inf'))
         wei = F.softmax(wei, dim=-1)
+        wei = self.dropout(wei)
         v = self.value(x)
         return wei@v
+
+class MultiHeadAttention(nn.Module):
+    def __init__(self, num_heads, head_size):
+        super().__init__()
+        self.heads = nn.ModuleList([Head(head_size) for _ in range(num_heads)])
+        self.proj = nn.Linear(head_size*num_heads, n_embd)
+        self.dropout = nn.Dropout(dropout)
+    def forward(self, x):
+        out = torch.cat([h(x) for h in self.heads], dim=-1)
+        return self.dropout(self.proj(out))
+
+class FeedForward(nn.Module):
+    def __init__(self, n_embd):
+        super().__init__()
+        self.net = nn.Sequential(
+            nn.Linear(n_embd, 4*n_embd),
+            nn.ReLU(),
+            nn.Linear(4*n_embd, n_embd),
+            nn.Dropout(dropout),
+        )
+    def forward(self, x):
+        return self.net(x)
+
+class Block(nn.Module):
+    def __init__(self, n_embd, n_head):
+        super().__init__()
+        self.sa = MultiHeadAttention(n_head, n_embd//n_head)
+        self.ffwd = FeedForward(n_embd)
+        self.ln1 = nn.LayerNorm(n_embd)
+        self.ln2 = nn.LayerNorm(n_embd)
+    def forward(self, x):
+        x = x+self.sa(self.ln1(x))
+        x = x+self.ffwd(self.ln2(x))
+        return x
 
 class GPTLanguageModel(nn.Module):
     def __init__(self):
         super().__init__()
         self.token_embedding_table = nn.Embedding(vocab_size, n_embd)
         self.position_embedding_table = nn.Embedding(block_size, n_embd)
-        self.sa_head = Head(n_embd)
+        self.blocks = nn.Sequential(*[Block(n_embd, n_head) for _ in range(n_layer)])
+        self.ln_f = nn.LayerNorm(n_embd)
         self.lm_head = nn.Linear(n_embd, vocab_size)
     def forward(self, idx, targets=None):
         B, T = idx.shape
         tok_emb = self.token_embedding_table(idx)                                
         pos_emb = self.position_embedding_table(torch.arange(T, device=device))  
         x = tok_emb + pos_emb
-        x = self.sa_head(x)
+        x = self.blocks(x)
+        x = self.ln_f(x)
         logits = self.lm_head(x)                                                 
         if targets is None:
             return logits, None
@@ -97,6 +138,7 @@ class GPTLanguageModel(nn.Module):
 
 if __name__ == '__main__':
     model = GPTLanguageModel().to(device)
+    print(f"{sum(p.numel() for p in model.parameters()) / 1e3:.1f}K parameters")
     optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
     for it in range(max_iters):
         if it%eval_interval==0:
