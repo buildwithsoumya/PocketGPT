@@ -2,7 +2,6 @@
 
 A tiny GPT, built from scratch in PyTorch, that learns to write like Shakespeare, one character at a time.
 
-Built step by step following Andrej Karpathy's [*Let's build GPT: from scratch, in code, spelled out*](https://www.youtube.com/watch?v=kCc8FmEb1nY). Every line, from the tokenizer to self-attention to the chat loop, is written by hand in a single readable file.
 
 | | |
 |---|---|
@@ -12,7 +11,7 @@ Built step by step following Andrej Karpathy's [*Let's build GPT: from scratch, 
 | **Training** | 5,000 steps on a laptop CPU in about 5½ minutes |
 | **Result** | train loss **1.74** · val loss **1.89** (random guessing = 4.17) |
 
-> **Note:** PocketGPT is a *base model*. It continues whatever text you give it in Shakespeare's style; it doesn't answer questions. Turning a base model into an assistant takes an extra fine-tuning stage (see [Roadmap](#roadmap)).
+> **Note:** PocketGPT is a *base model*. It continues whatever text you give it in Shakespeare's style; it doesn't answer questions. Turning a base model into an assistant takes an extra fine-tuning stage.
 
 ---
 
